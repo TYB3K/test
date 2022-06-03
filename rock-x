@@ -1,0 +1,68 @@
+-- INFINITE REBIRTHS
+
+local player = game.Players.LocalPlayer
+
+local gui = player.PlayerGui:WaitForChild("mrozisz")
+
+local frame = Instance.new("Frame")
+local UICorner1 = Instance.new("UICorner")
+UICorner1.Parent = frame
+frame.Parent = gui
+frame.Position = UDim2.new(0.793, 0, 0.831, 0)
+frame.Size = UDim2.new(0.201, 0, 0.159, 0)
+
+frame.BackgroundColor3 = Color3.fromRGB(131, 0, 65)
+
+local title = Instance.new("TextLabel")
+title.Parent = frame
+title.Position = UDim2.new(0.045, 0, 0.074, 0)
+title.Size = UDim2.new(0.908, 0, 0.41, 0)
+
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextScaled = true
+
+title.Text = "🔥 ROCK SIMULATOR X INFINITE REBIRTHS! 🔥"
+title.Font = Enum.Font.FredokaOne
+
+local Button = Instance.new("TextButton")
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = Button
+Button.Parent = frame
+Button.Position = UDim2.new(0.222, 0, 0.571, 0)
+Button.Size = UDim2.new(0.552, 0, 0.295, 0)
+
+Button.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.TextScaled = true
+
+Button.Text = "Start"
+Button.Font = Enum.Font.FredokaOne
+
+Button.MouseButton1Click:Connect(function()
+	if Button.Text == "Start" then
+		Button.Text = "Stop"
+		Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	elseif Button.Text == "Stop" then
+		Button.Text = "Start"
+		Button.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+	end
+	
+	while Button.Text == "Stop" do
+		game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+    	game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+    	game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+    	game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+    	game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+    	game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+    	game:GetService("ReplicatedStorage").MarcelsChest:FireServer(1)
+    	game:GetService("ReplicatedStorage").MarcelsEngineEvent:FireServer("Reb", 1)
+		wait(0.01)
+	end
+end)
