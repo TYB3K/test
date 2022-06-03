@@ -1,0 +1,11 @@
+local player = game.Players.LocalPlayer
+
+while true do
+    for _, i in pairs(workspace:GetChildren()) do
+        if i:FindFirstChild("Script") and i.Name == "MeshPart" then
+            player.Character.HumanoidRootPart.CFrame = i.CFrame
+            wait(0.01)
+        end
+    end
+    wait(0.01)
+end
